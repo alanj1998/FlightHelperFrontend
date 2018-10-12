@@ -1,0 +1,20 @@
+<div class="ui segment prim-div search-div">
+  <div class="ui search">
+    <div class="ui icon input">
+      <input class="prompt" [(ngModel)]="search" (ngModelChange)="GetLetters($event);GetAirports()" type="text" placeholder="Dublin...">
+      <i class="search icon"></i>
+    </div>
+    <div class="results"></div>
+  </div>
+
+  <div class="ui divided items">
+    <div class="item" *ngFor="let airport of airports">
+      <div id="flagDiv"><img class="flagImage" alt="Flag of {{airport.countryName}}" src="//flagpedia.net/data/flags/small/{{airport.countryID}}.png"/></div>
+      <div>
+        <h1>{{airport.name}}</h1>
+        <h2>{{airport.city}}, {{airport.countryName}}</h2>
+        <h3>{{airport.id}}</h3>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="ui segment prim-div search-div">
+  <div class="ui divided items">
+    <div class="item" *ngFor="let flight of Flights">
+          <div id="flagDiv">
+              <img class="flagImage" alt="Flag of {{flight.Origin}} flag" src="//flagpedia.net/data/flags/small/{{flight.Origin_Country_Code}}.png"/>
+            </div>
+            <h3>{{flight.Origin}}</h3>
+            <h3>-></h3>
+          <h3>{{flight.Destination}}</h3>
+          <div id="flagDiv">
+              <img class="flagImage" alt="Flag of {{flight.Destination}} flag" src="//flagpedia.net/data/flags/small/{{flight.Destination_Country_Code}}.png"/>
+            </div>
+      
+    </div>
+  </div>
+</div>
